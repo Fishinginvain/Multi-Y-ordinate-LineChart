@@ -30,7 +30,7 @@ matplotlib.use('wxAgg')
 
 
 
-多Y轴折线图绘制工具712.py
+多Y轴折线图绘制工具demo712.py
 2024年7月12日完成
 依赖库和部分设置为：
 
@@ -52,12 +52,12 @@ matplotlib.use('wxAgg')
 
 
 193行（无大段注释）python代码：
-优化了可视化窗口底层架构
+优化了可视化窗口底层架构。
 优化了复选框界面，将原本的单列复选变成三列复选，每列最多6个指标，如果数据较多，可以使用下一页和上一页按钮展示需要选择的指标。
 
 
 
-多Y轴折线图绘制工具714.py
+多Y轴折线图绘制工具demo714.py
 2024年7月14日完成
 依赖库和部分设置为：
 
@@ -79,5 +79,34 @@ matplotlib.use('wxAgg')
 
 
 201行（无大段注释）python代码：
-优化了折线图展示部分
+优化了折线图展示部分。
 按照选择的数据文件自动调整折线图和纵坐标尺寸，使其适应窗口。
+
+
+
+多Y轴折线图绘制工具demo715.py
+2024年7月15日完成
+依赖库和部分设置为：
+
+
+import wx
+import numpy as np
+import matplotlib
+import matplotlib.figure as mfigure
+from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigureCanvas
+from matplotlib.backends.backend_wx import NavigationToolbar2Wx
+from matplotlib import rcParams
+import pandas as pd
+import os
+import matplotlib.colors as mcolors
+import matplotlib.dates as mdates  # 新增导入
+
+rcParams['font.family'] = 'SimHei'
+matplotlib.use('wxAgg')
+
+
+252行（无大段注释）python代码：
+优化了整体布局，分为2*2四个部分，左上展示折线图，左下是复选框，右上是放大的图例，右下是上一页与下一页按钮。
+优化了折线图展示部分，使折线图更充实地在图片展示区域。
+优化了若干细节，包括折线与图例的颜色不对应，指标文件不显示后缀（复选框仍然显示）和数据文件的选择先后顺序的影响等。
+优化了运行速度，每次更新时会清除缓存，每次重新选择文件夹时会清空画布。
