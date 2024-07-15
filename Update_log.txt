@@ -54,3 +54,30 @@ matplotlib.use('wxAgg')
 193行（无大段注释）python代码：
 优化了可视化窗口底层架构
 优化了复选框界面，将原本的单列复选变成三列复选，每列最多6个指标，如果数据较多，可以使用下一页和上一页按钮展示需要选择的指标。
+
+
+
+多Y轴折线图绘制工具714.py
+2024年7月14日完成
+依赖库和部分设置为：
+
+
+import wx
+import numpy as np
+import matplotlib
+import matplotlib.figure as mfigure
+from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigureCanvas
+from matplotlib.backends.backend_wx import NavigationToolbar2Wx
+from matplotlib import rcParams
+import pandas as pd
+import os
+import matplotlib.colors as mcolors
+import matplotlib.dates as mdates  # 新增导入
+
+rcParams['font.family'] = 'SimHei'
+matplotlib.use('wxAgg')
+
+
+201行（无大段注释）python代码：
+优化了折线图展示部分
+按照选择的数据文件自动调整折线图和纵坐标尺寸，使其适应窗口。
