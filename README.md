@@ -8,3 +8,4 @@ One X coordinat with two Y coordinates: <br>
 ![image](Figures/2.jpg) <br>
 One X coordinat with more than two Y coordinates: <br>
 ![image](Figures/3.jpg) <br>
+The introduction with two languages would update the other day.
