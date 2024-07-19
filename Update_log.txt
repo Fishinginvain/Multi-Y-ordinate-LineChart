@@ -110,3 +110,31 @@ matplotlib.use('wxAgg')
 优化了折线图展示部分，使折线图更充实地在图片展示区域。
 优化了若干细节，包括折线与图例的颜色不对应，指标文件不显示后缀（复选框仍然显示）和数据文件的选择先后顺序的影响等。
 优化了运行速度，每次更新时会清除缓存，每次重新选择文件夹时会清空画布。
+
+
+
+
+多Y轴折线图绘制工具demo718.py
+2024年7月18日完成
+依赖库和部分设置为：
+
+
+import wx
+import numpy as np
+import matplotlib
+import matplotlib.figure as mfigure
+from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigureCanvas
+from matplotlib.backends.backend_wx import NavigationToolbar2Wx
+from matplotlib import rcParams
+import pandas as pd
+import os
+import matplotlib.colors as mcolors
+import matplotlib.dates as mdates  # 新增导入
+
+rcParams['font.family'] = 'SimHei'
+matplotlib.use('wxAgg')
+
+
+324行（无大段注释）python代码：
+初步实现了高亮功能，鼠标靠近某条折线的附近时，会在鼠标附近显示此折线的部分信息并且将此折线高亮显示。
+优化了部分细节。
