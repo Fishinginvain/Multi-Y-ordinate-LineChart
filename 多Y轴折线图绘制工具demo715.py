@@ -193,7 +193,7 @@ class MyFrame(wx.Frame):
                     ax_new.spines['left'].set_color('none')
                     ax_new.yaxis.label.set_color(self.file_colors[filename])
                     ax_new.tick_params(axis='y', colors=self.file_colors[filename], labelsize=12)
-                    #line = ax_new.plot(df.index, df['value'], label=filename, color=self.file_colors[filename])
+                    line = ax_new.plot(df.index, df['value'], label=filename, color=self.file_colors[filename])
                     ax_new.set_ylabel(os.path.splitext(filename)[0], color=self.file_colors[filename], fontsize=12, fontweight='bold')
                     # 压缩图表
                     self.figure.subplots_adjust(right=0.95 - (j - 1) * 0.05)
